@@ -125,7 +125,7 @@ def build(data, output):
         lines += [esc(line) for line in item['details']]
         if item.get('groups'):
             lines.append(' and '.join(link(group['name'], group['url']) for group in item['groups']) + ' groups.')
-        story.append(entry('<b>' + esc(item['role']) + '</b>', item['dates'], lines))
+        story.append(entry('<b>' + esc(item['role']) + '</b>', item['dates'], lines, gap=3))
 
     story.append(heading('Publications'))
     for item in data['publications']:
