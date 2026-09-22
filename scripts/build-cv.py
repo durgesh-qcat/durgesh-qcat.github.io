@@ -141,6 +141,11 @@ def build(data, output):
     ], gap=0))
 
     story.append(PageBreak())
+    if data.get('workInProgress'):
+        story.append(heading('Research in progress'))
+        story.append(p(''.join(link(part['text'], part['href']) if part.get('href') else esc(part['text']) for part in data['workInProgress'])))
+        story.append(Spacer(1, 9))
+
     story.append(heading('Teaching experience'))
     story.append(p('<b>' + esc(data['teachingRole']) + '</b>, ' + esc(data['teachingInstitution'])))
     story.append(Spacer(1, 5))
@@ -166,18 +171,17 @@ def build(data, output):
             )
         story.append(entry('<b>' + esc(item['title']) + '</b>', item['date'], lines, gap=9))
 
-    story.append(heading('Honors and awards'))
+    awards = [heading('Honors and awards')]
     for item in data['awards']:
         description = esc(item['description'])
         if item['description'] == thesis['nomination']:
             description = '<i>' + description + '</i>'
-        story.append(entry('<b>' + esc(item['title']) + '</b>', item['date'], [description], gap=8))
-
-    story.append(PageBreak())
-    if data.get('workInProgress'):
-        story.append(heading('Research in progress'))
-        story.append(p(''.join(link(part['text'], part['href']) if part.get('href') else esc(part['text']) for part in data['workInProgress'])))
-        story.append(Spacer(1, 9))
+        awards.extend([
+            dated('<b>' + esc(item['title']) + '</b>', item['date']),
+            p(description),
+            Spacer(1, 8),
+        ])
+    story.append(KeepTogether(awards))
 
     story.append(heading('Mathematics and AI projects'))
     blog = data.get('mathAiFeaturedPost')
