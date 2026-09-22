@@ -104,15 +104,6 @@
   "research": [
     {
       "role": "Visiting Researcher",
-      "institution": "Dirac Labs",
-      "location": "Madison, USA (remote)",
-      "dates": "July 2026 – present",
-      "details": [
-        "Focusing on AI for mathematics, particularly computation and formalisation, alongside AI safety."
-      ]
-    },
-    {
-      "role": "Visiting Researcher",
       "institution": "Tallinn University of Technology (TalTech)",
       "location": "Tallinn, Estonia",
       "dates": "Winter 2026",
