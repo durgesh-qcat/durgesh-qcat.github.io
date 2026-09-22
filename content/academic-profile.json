@@ -1,0 +1,412 @@
+{
+  "profile": {
+    "name": "Durgesh Kumar",
+    "firstName": "Durgesh",
+    "email": "durgesh.kumar@ucalgary.ca",
+    "github": "https://github.com/durgesh-qcat",
+    "siteUrl": "https://durgesh-qcat.github.io",
+    "cvUrl": "/cv/durgesh-kumar-cv.pdf",
+    "websitePublished": true,
+    "photo": {
+      "src": "/images/durgesh-kumar-outdoors.jpg",
+      "width": 960,
+      "height": 1280,
+      "alt": "Durgesh Kumar outdoors beneath a flowering tree."
+    },
+    "scholar": "https://scholar.google.com/citations?user=EHth0-cAAAAJ&hl=en"
+  },
+  "about": [
+    [
+      {
+        "text": "Hello, I am Durgesh. I study category theory and quantum foundations."
+      }
+    ],
+    [
+      {
+        "text": "I recently completed my master's in mathematics at the University of Calgary, supervised by "
+      },
+      {
+        "text": "Robin Cockett",
+        "href": "https://en.wikipedia.org/wiki/Robin_Cockett"
+      },
+      {
+        "text": ". My master's thesis explored a generalisation of the correspondence between orthonormal bases and copyable elements of Frobenius algebras to the infinite-dimensional setting. Before that, I studied mathematics and physics at Ashoka University. In winter 2026, I visited the "
+      },
+      {
+        "text": "Compositional Systems and Methods",
+        "href": "https://compose.ee/"
+      },
+      {
+        "text": " and "
+      },
+      {
+        "text": "Logic and Semantics",
+        "href": "https://cs.ioc.ee/lsg/"
+      },
+      {
+        "text": " groups at TalTech."
+      }
+    ]
+  ],
+  "education": [
+    {
+      "institution": "University of Calgary",
+      "location": "Calgary, Canada",
+      "degree": "M.Sc. in Mathematics (thesis-based)",
+      "dates": "Jan 2024 – Apr 2026",
+      "details": [
+        "CGPA: 4.00/4.00. Supervisor: Robin Cockett."
+      ]
+    },
+    {
+      "institution": "Ashoka University",
+      "location": "Sonipat, India",
+      "degree": "Postgraduate Diploma in Research",
+      "dates": "Aug 2021 – May 2022",
+      "details": [
+        "Advanced major in mathematics; minor in physics.",
+        "GPA: 3.76; magna cum laude."
+      ]
+    },
+    {
+      "institution": "Ashoka University",
+      "location": "Sonipat, India",
+      "degree": "B.Sc. in Mathematics",
+      "dates": "Aug 2018 – May 2021",
+      "details": [
+        "Concentration in physics."
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "id": "unitary-inner-product-dagger",
+      "year": "2026",
+      "title": "Unitary, Inner Product, and Dagger Categories",
+      "authors": "Robin Cockett, Durgesh Kumar, and Priyaa Varshinee Srinivasan",
+      "venue": "Applied Category Theory (ACT) 2026",
+      "url": "https://arxiv.org/abs/2603.27614",
+      "venueUrl": "https://actconf2026.github.io/accepted.html",
+      "status": "Accepted to the 9th International Conference on Applied Category Theory, Tallinn, Estonia, July 2026."
+    }
+  ],
+  "thesis": {
+    "title": "An adjunction between finiteness spaces and algebras in Lefschetz spaces",
+    "author": "Durgesh Kumar",
+    "degree": "Master's thesis in mathematics",
+    "institution": "University of Calgary",
+    "year": "2026",
+    "supervisor": "Robin Cockett",
+    "nomination": "Nominated by the thesis committee for a national award.",
+    "url": "https://cspages.ucalgary.ca/~robin/Theses/ucalgary_2026_kumar_durgesh.pdf",
+    "localUrl": "/thesis/durgesh-kumar-msc-thesis.pdf"
+  },
+  "research": [
+    {
+      "role": "Visiting Researcher",
+      "institution": "Tallinn University of Technology (TalTech)",
+      "location": "Tallinn, Estonia",
+      "dates": "Winter 2026",
+      "details": [],
+      "groups": [
+        {
+          "name": "Compositional Systems and Methods",
+          "url": "https://compose.ee/"
+        },
+        {
+          "name": "Logic and Semantics",
+          "url": "https://cs.ioc.ee/lsg/"
+        }
+      ]
+    },
+    {
+      "role": "ACT Adjoint School participant",
+      "institution": "University of Maryland, College Park",
+      "location": "United States",
+      "dates": "Feb - Aug 2023",
+      "details": [
+        "Project: Message Passing Logic for Categorical Quantum Mechanics.",
+        "Supervisor: Priyaa Varshinee Srinivasan (NIST)."
+      ]
+    },
+    {
+      "role": "Research Assistant",
+      "institution": "Ashoka University",
+      "location": "India",
+      "dates": "Jun 2022 - Dec 2023",
+      "details": [
+        "Project: Monoidal Categories and Computation.",
+        "Supervisor: Debayan Gupta."
+      ]
+    }
+  ],
+  "outreach": [
+    {
+      "id": "linear-actegories",
+      "title": "Linear Actegories",
+      "url": "https://golem.ph.utexas.edu/category/2023/09/linear_actegories.html",
+      "date": "September 2023",
+      "context": "n-Category Café",
+      "authors": "Paige Frederick, Durgesh Kumar, and Fabian Wiesner",
+      "description": "We wrote an expository blog post on linear actegories as part of the ACT Adjoint School."
+    },
+    {
+      "id": "applied-category-theory-module",
+      "title": "Applied Category Theory",
+      "url": "https://drive.google.com/drive/folders/1axWePyZLRdUDBJrTt43-8fDyIaDviSI-?usp=sharing",
+      "date": "2022",
+      "context": "Ashoka University",
+      "description": "I designed and co-taught a study module in applied category theory.",
+      "linkLabel": "Course materials"
+    }
+  ],
+  "teaching": [
+    {
+      "term": "Summer 2025",
+      "courses": "MATH 271"
+    },
+    {
+      "term": "Winter 2025",
+      "courses": "MATH 271, MATH 311"
+    },
+    {
+      "term": "Fall 2024",
+      "courses": "MATH 271"
+    },
+    {
+      "term": "Winter 2024",
+      "courses": "MATH 267, MATH 211"
+    }
+  ],
+  "talks": [
+    {
+      "id": "tallcat-2026",
+      "date": "March 2026",
+      "title": "An adjunction between finiteness spaces and algebras in Lefschetz spaces",
+      "event": "TallCat Seminar",
+      "location": "TalTech, Tallinn, Estonia",
+      "kind": "Talk"
+    },
+    {
+      "id": "contextuality-seminar",
+      "date": "Fall 2025",
+      "title": "Comparative study of different formalisms of contextuality",
+      "event": "Quantum Group seminar series",
+      "location": "University of Calgary",
+      "kind": "Semester-long seminar"
+    },
+    {
+      "id": "sheaf-contextuality",
+      "date": "September 2025",
+      "title": "Sheaf-theoretic view of contextuality",
+      "event": "Peripatetic Seminar",
+      "location": "University of Calgary",
+      "kind": "Talk"
+    },
+    {
+      "id": "quantum-horizons",
+      "date": "August 2025",
+      "title": "Categorical semantics of infinite-dimensional quantum theory",
+      "event": "International Quantum Horizons Symposium",
+      "location": "Banff",
+      "kind": "Poster",
+      "links": [
+        {
+          "label": "Poster (PDF)",
+          "url": "/posters/quantum-horizons-2025.pdf"
+        }
+      ]
+    },
+    {
+      "id": "fmcs-2025",
+      "date": "June 2025",
+      "title": "A study of Lefschetz spaces",
+      "event": "FMCS 2025",
+      "location": "University of Ottawa",
+      "kind": "Talk",
+      "websiteEvent": "Foundational Methods in Computer Science (FMCS) 2025",
+      "links": [
+        {
+          "label": "Slides (PDF)",
+          "url": "https://drive.google.com/file/d/129divKiBPRaqtq_OUKS_wNVS1PdBVR8s/view"
+        }
+      ]
+    },
+    {
+      "id": "amd-2025",
+      "date": "May 2025",
+      "title": "Towards Frobenius algebras in infinite-dimensional quantum mechanics",
+      "event": "Alberta Mathematical Dialogues",
+      "location": "University of Calgary",
+      "kind": "Talk",
+      "links": [
+        {
+          "label": "Slides (PDF)",
+          "url": "/slides/alberta-mathematical-dialogues-2025.pdf"
+        }
+      ]
+    },
+    {
+      "id": "peripatetic-2025",
+      "date": "February 2025",
+      "title": "Towards Frobenius algebras in infinite-dimensional quantum mechanics",
+      "event": "Peripatetic Seminar",
+      "location": "University of Calgary",
+      "kind": "Talk"
+    },
+    {
+      "id": "fmcs-2024",
+      "date": "July 2024",
+      "title": "The category of Lagrangian relations",
+      "event": "FMCS 2024",
+      "location": "Kananaskis",
+      "kind": "Talk",
+      "websiteEvent": "Foundational Methods in Computer Science (FMCS) 2024",
+      "links": [
+        {
+          "label": "Slides (PDF)",
+          "url": "https://cspages.ucalgary.ca/~robin/FMCS/FMCS2024/slides/FMCS%20Presentation_Durgesh.pdf"
+        }
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Master's thesis nomination",
+      "date": "2026",
+      "description": "Nominated by the thesis committee for a national award."
+    },
+    {
+      "title": "Mitacs Globalink Research Award - Quantum Stream",
+      "date": "2026",
+      "description": "Tallinn University of Technology."
+    },
+    {
+      "title": "Mitacs Globalink Research Award - Quantum Stream",
+      "date": "2025",
+      "description": "University of Edinburgh; withdrawn because ATAS clearance was not received in time."
+    },
+    {
+      "title": "Dean's List",
+      "date": "2020, 2022",
+      "description": "Ashoka University; Monsoon 2020 and Spring 2022."
+    },
+    {
+      "title": "Ignite National Award for Grassroot Innovations",
+      "date": "2012",
+      "description": "Department of Science and Technology, Government of India."
+    }
+  ],
+  "patent": {
+    "title": "System to Integrate Driving License Validation in Vehicular Control",
+    "number": "3408/DEL/2012"
+  },
+  "mathAiIntro": [
+    "I have been concerned by the rapid progress of artificial intelligence. Recent incidents should make it clear that, without timely intervention, the default outcome doesn't look good for humanity. As a mathematician, I am exploring how I can contribute to the responsible development and use of AI. AI safety is an urgent challenge that requires ideas from all aspects of human endeavour. To support this goal, I have also been experimenting with AI for mathematics, with a focus on computation and formalisation. In the post below, I explore how ideas about agents in quantum foundations might inform AI safety."
+  ],
+  "mathAiFeaturedPost": {
+    "title": "Heisenberg meets Anju",
+    "subtitle": "Notion of agents in quantum foundations and artificial intelligence",
+    "description": "This post explores how the notion of agents in extended Wigner’s friend scenarios in quantum foundations can add nuance to agentic frameworks in AI safety.",
+    "url": "https://contextuality.substack.com/p/heisenberg-meets-anju"
+  },
+  "mathAi": [
+    {
+      "id": "inverse-galois",
+      "title": "Inverse Galois Problem",
+      "url": "https://team-dirac-igp24.vercel.app/",
+      "description": "We (Team Dirac) participated in the Inverse Galois Problem Competition, organised by the SAIR Foundation, and finished in 14th place.",
+      "links": [
+        {
+          "label": "Project write-up",
+          "url": "https://team-dirac-igp24.vercel.app/"
+        },
+        {
+          "label": "Leaderboard",
+          "url": "https://competition.sair.foundation/competitions/igp24/leaderboard"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/ash9241/team-dirac-igp24"
+        }
+      ]
+    },
+    {
+      "id": "lemma-portfolio",
+      "title": "LemmaPortfolio",
+      "url": "https://github.com/durgesh-qcat/lemma-portfolio",
+      "description": "We developed a benchmark for selecting a small shared set of useful lemmas for multiple Lean goals. This work is part of our larger motivation to study how language models can assist a mathematician in theory building. The best tested GPT-6 Astra runs found an optimal three-lemma portfolio on only 50% of test episodes (30/60).",
+      "links": [
+        {
+          "label": "Project and code",
+          "url": "https://github.com/durgesh-qcat/lemma-portfolio"
+        },
+        {
+          "label": "Benchmark results",
+          "url": "https://github.com/durgesh-qcat/lemma-portfolio/blob/main/RESULTS.md"
+        }
+      ]
+    },
+    {
+      "id": "quantum-latin-squares",
+      "title": "A Quantum Latin Square of Order Six with Cardinality 29",
+      "url": "https://arxiv.org/abs/2608.12607",
+      "description": "We constructed a quantum Latin square of order six with cardinality 29, completing the cardinality spectrum for order six.",
+      "links": [],
+      "authors": "Aishwarya P. Das and Durgesh Kumar"
+    }
+  ],
+  "mathAiOngoing": [
+    {
+      "id": "acc-challenge",
+      "parts": [
+        { "text": "We (Team Dirac) are currently working on the " },
+        {
+          "text": "Andrews–Curtis Conjecture (ACC) Challenge",
+          "href": "https://competition.sair.foundation/competitions/acc/overview"
+        },
+        { "text": ", organised by the SAIR Foundation, and hovering around the top five across the competition categories (" },
+        {
+          "text": "leaderboard",
+          "href": "https://competition.sair.foundation/competitions/acc/leaderboard"
+        },
+        { "text": ")." }
+      ]
+    },
+    {
+      "id": "ai4gr",
+      "parts": [
+        { "text": "We also have an ongoing project on formalising some results in mathematical general relativity in Lean (" },
+        {
+          "text": "repository",
+          "href": "https://github.com/durgesh-qcat/AI4GR"
+        },
+        { "text": "), and a project exploring some computational evidence in the Indus script (" },
+        {
+          "text": "repository",
+          "href": "https://github.com/durgesh-qcat/indus-script-research"
+        },
+        { "text": ")." }
+      ]
+    }
+  ],
+  "courses": [
+    "Measure Theory",
+    "Algebraic Topology",
+    "Functional Analysis",
+    "Elliptic Curves",
+    "Algebraic Number Theory",
+    "Fourier Series",
+    "General Relativity and Cosmology",
+    "Mathematical Logic",
+    "Topics in Quantum Computation and Quantum Information",
+    "Category Theory"
+  ],
+  "teachingRole": "Graduate Teaching Assistant",
+  "teachingInstitution": "University of Calgary",
+  "workInProgress": [
+    {
+      "text": "We are working on generalising the notion of a non-stationary dagger developed in our paper to chiral settings. Our main aim is to connect it to the literature on linearly distributive categories and thus to categorical semantics of quantum mechanics. Further work will explore applications of this framework to modelling concurrent quantum protocols."
+    }
+  ]
+}

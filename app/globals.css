@@ -1,0 +1,476 @@
+/*
+ * Layout adapted to the user's reference: satpreetmakhija.com.
+ * Reference: Satpreet Makhija's al-folio fork (MIT); see LICENSE-AL-FOLIO.
+ * The fixed top bar, 800px column, Libre Baskerville, and burgundy palette
+ * follow that reference. Content is shared with the academic CV.
+ */
+@import "tailwindcss";
+
+:root {
+  /* Keep grey minimal: brief metadata only. Descriptive prose uses --text. */
+  --background: #fff;
+  --text: #171717;
+  --secondary: #686868;
+  --link: #8a2d3b;
+  --hover: #6b1f2b;
+  --divider: rgba(0, 0, 0, 0.1);
+  --font-body:
+    "Libre Baskerville", "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--text);
+  --font-serif: var(--font-body);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-padding-top: 76px;
+}
+body {
+  margin: 0;
+  padding-top: 56px;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.72;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+}
+p {
+  margin: 0 0 1.15rem;
+}
+strong {
+  font-weight: 700;
+}
+::selection {
+  background: #f0e0e3;
+}
+.skip-link {
+  position: fixed;
+  left: 12px;
+  top: 7px;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid var(--divider);
+  z-index: 100;
+  transform: translateY(-150%);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  border-bottom: 1px solid var(--divider);
+  background: rgb(255 255 255 / 97%);
+  z-index: 20;
+}
+.topbar-inner {
+  width: min(100% - 40px, 800px);
+  min-height: 56px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.site-name {
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.site-name:hover {
+  text-decoration: none;
+}
+.site-name-home {
+  visibility: hidden;
+}
+.topbar nav {
+  display: flex;
+  align-items: stretch;
+  gap: 25px;
+  margin-left: auto;
+}
+.nav-link {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 56px;
+  white-space: nowrap;
+}
+.nav-link:hover {
+  color: var(--hover);
+  text-decoration: none;
+}
+.nav-link[aria-current="page"] {
+  color: var(--link);
+  font-weight: 700;
+}
+
+.site-content {
+  width: min(100% - 40px, 800px);
+  margin: 43px auto 0;
+  flex: 1 0 auto;
+}
+.page-heading {
+  margin-bottom: 27px;
+}
+h1 {
+  margin: 0 0 11px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.42;
+}
+.page-description {
+  font-size: 15px;
+  color: var(--secondary);
+  margin: 0;
+}
+.biography {
+  display: flow-root;
+}
+.profile-photo-block {
+  float: right;
+  width: 32%;
+  margin: 2px 0 22px 28px;
+}
+.profile-photo-link {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.profile-photo-block figcaption {
+  margin-top: 9px;
+  font-size: 13px;
+  text-align: center;
+}
+.scholar-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 36px;
+  vertical-align: middle;
+}
+.scholar-cap {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.scholar-cap-board {
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  clip-path: polygon(50% 10%, 100% 35%, 50% 60%, 0 35%);
+}
+.scholar-cap-base {
+  position: absolute;
+  top: 13px;
+  left: 6px;
+  width: 12px;
+  height: 7px;
+  background: currentColor;
+  border-radius: 0 0 50% 50%;
+}
+.scholar-cap-tassel {
+  position: absolute;
+  top: 9px;
+  right: 1px;
+  width: 1.5px;
+  height: 11px;
+  background: currentColor;
+}
+.scholar-cap-tassel::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  width: 3.5px;
+  height: 3.5px;
+  background: currentColor;
+  border-radius: 50%;
+}
+.profile-photo {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  transform: scale(1.55);
+  transform-origin: center bottom;
+}
+.contact-line {
+  font-size: 14px;
+}
+.contact-line span {
+  color: var(--secondary);
+}
+.home-section {
+  margin-top: 30px;
+}
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+}
+.section-heading h2 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+.section-heading > a {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.publication-entry {
+  border-top: 1px solid var(--divider);
+  padding: 22px 0 26px;
+}
+.publication-meta {
+  color: var(--secondary);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  line-height: 1.7;
+  margin: 0 0 10px;
+}
+.publication-entry h2,
+.publication-entry h3 {
+  margin: 0 0 8px;
+  max-width: 690px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.publication-authors {
+  font-size: 14px;
+  margin: 0 0 13px;
+}
+.author-names {
+  color: var(--text);
+}
+.publication-summary {
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0 0 14px;
+  max-width: 680px;
+}
+/* Inline links remain quiet and easy to scan. */
+.resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: 13px;
+  margin: 0;
+}
+.content-section {
+  padding: 26px 0;
+  border-top: 1px solid var(--divider);
+}
+.content-section h2 {
+  margin-bottom: 18px;
+}
+.entry-title {
+  font-size: 20px;
+  line-height: 1.55;
+  margin: 0 0 12px;
+}
+.entry-meta, .supporting-text, .breadcrumb {
+  color: var(--secondary);
+  font-size: 14px;
+}
+.thesis-section > h2 {
+  margin-bottom: 18px;
+}
+.entry-meta { margin-bottom: 8px; }
+.breadcrumb { margin-bottom: 22px; }
+.thesis-title { margin-bottom: 8px; }
+.thesis-entry h2 { font-size: 25px; }
+.thesis-nomination { font-size: 14px; }
+.highlight-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+}
+.highlight-list li { padding: 0; margin-bottom: 14px; }
+.cv-note { font-size: 14px; margin: 18px 0 0; }
+.talk-kind { font-style: italic; margin-top: 5px !important; }
+
+.talk-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.talk-list li {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 28px;
+  align-items: baseline;
+  border-top: 1px solid var(--divider);
+  padding: 23px 0;
+}
+.talk-date {
+  font-size: 12px;
+  color: var(--text);
+}
+.talk-list h2 {
+  font-size: 19px;
+  line-height: 1.5;
+  margin: 0 0 7px;
+}
+.talk-list p {
+  font-size: 14px;
+  color: var(--secondary);
+  margin: 0;
+}
+.talk-list .resource-links {
+  margin-top: 7px;
+  font-size: 13px;
+}
+.math-ai-page > p {
+  margin-bottom: 32px;
+}
+.math-ai-sections {
+  display: grid;
+}
+.math-ai-entry {
+  display: grid;
+  gap: 10px;
+  padding: 20px 0;
+  border-top: 1px solid var(--divider);
+}
+.math-ai-entry:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.math-ai-entry h2 {
+  margin: 0;
+}
+.math-ai-entry p {
+  margin: 0;
+}
+.math-ai-project h2 {
+  font-size: 21px;
+}
+.math-ai-project p {
+  font-size: 15px;
+}
+.math-ai-blog > p {
+  font-size: 15px;
+}
+.math-ai-blog-heading {
+  display: grid;
+  gap: 4px;
+}
+.site-footer {
+  width: min(100% - 40px, 800px);
+  margin: 30px auto 0;
+  padding: 30px 0;
+  border-top: 1px solid var(--divider);
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--secondary);
+}
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 780px) {
+  .site-name { display: none; }
+  .topbar nav { width: 100%; justify-content: space-between; gap: 16px; }
+  .nav-link { font-size: 13px; }
+}
+@media (max-width: 600px) {
+  .topbar-inner { width: calc(100% - 32px); }
+  .site-content { width: calc(100% - 36px); margin-top: 31px; }
+  body { font-size: 15px; }
+  h1 { font-size: 30px; }
+  .page-description { font-size: 13px; }
+  .section-heading h2 { font-size: 21px; }
+  .publication-entry h2, .publication-entry h3 { font-size: 18px; }
+  .publication-summary, .publication-authors { font-size: 13px; }
+  .talk-list li { grid-template-columns: 1fr; gap: 7px; }
+  .site-footer {
+    width: calc(100% - 36px);
+    flex-direction: column;
+    gap: 7px;
+    font-size: 10px;
+  }
+  .section-heading { flex-wrap: wrap; gap: 0 15px; margin-bottom: 15px; }
+  .section-heading h2 { margin-bottom: 5px; }
+}
+@media (max-width: 540px) {
+  html { scroll-padding-top: 112px; }
+  body { padding-top: 96px; }
+  .topbar { height: 96px; }
+  .topbar-inner { min-height: 96px; }
+  .topbar nav {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0 12px;
+    padding: 10px 0;
+  }
+  .nav-link {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 12px;
+    line-height: 38px;
+  }
+  .nav-link:nth-child(4), .nav-link:nth-child(5) { grid-column: span 3; }
+  .profile-photo-block {
+    float: none;
+    width: min(100%, 260px);
+    margin: 0 auto 24px;
+  }
+}
+@media print {
+  body { padding-top: 0; }
+  .topbar, .skip-link { display: none; }
+  .site-content { width: 100%; margin-top: 0; }
+  a { color: inherit; }
+  .publication-entry, .content-section { break-inside: avoid; }
+}
