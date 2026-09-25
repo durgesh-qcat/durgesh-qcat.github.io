@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { profile, publications, outreach } from "./content";
+import { profile, publications, outreach, mathAiFeaturedPost, mathAiAdditionalPosts } from "./content";
 import { AboutStatement } from "./components/about-statement";
 import { PublicationEntry } from "./components/publication-entry";
 import { ThesisEntry } from "./components/thesis-entry";
@@ -74,6 +74,9 @@ export default function AboutPage() {
         </ul>
         <p className="supporting-text">
           Further teaching experience and activities are in my <a href={profile.cvUrl}>CV</a>.
+        </p>
+        <p className="supporting-text">
+          For my blog posts on <a href={mathAiFeaturedPost.url}>AI safety</a> and <a href={mathAiAdditionalPosts[0].url}>formalisation</a>, see the <a href="/math-ai/">Math–AI section</a>.
         </p>
       </section>
     </article>
