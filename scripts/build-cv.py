@@ -164,6 +164,8 @@ def build(data, output):
             lines.append(link(item['linkLabel'], item['url']))
         story.append(entry('<b>' + link(item['title'], item['url']) + '</b>', item['date'], lines))
 
+    story.append(p('For my blogs on formalisation and AI safety, see Mathematics and AI projects.'))
+
     story.append(heading('Talks, seminars, and posters'))
     for item in data['talks']:
         lines = [esc(item['kind']) + '. ' + esc(item['event']) + '; ' + esc(item['location']) + '.']
