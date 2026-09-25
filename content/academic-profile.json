@@ -302,7 +302,7 @@
     "number": "3408/DEL/2012"
   },
   "mathAiIntro": [
-    "I have been concerned by the rapid progress of artificial intelligence. Recent incidents should make it clear that, without timely intervention, the default outcome doesn't look good for humanity. As a mathematician, I am exploring how I can contribute to the responsible development and use of AI. AI safety is an urgent challenge that requires ideas from all aspects of human endeavour. To support this goal, I have also been experimenting with AI for mathematics, with a focus on computation and formalisation. In the post below, I explore how ideas about agents in quantum foundations might inform AI safety."
+    "I have been concerned by the rapid progress of artificial intelligence. Recent incidents should make it clear that, without timely intervention, the default outcome doesn't look good for humanity. As a mathematician, I am exploring how I can contribute to the responsible development and use of AI. AI safety is an urgent challenge that requires ideas from all aspects of human endeavour. In this regard, I have been experimenting with AI for mathematics, with a focus on computation, formalisation, and AI safety. In the post below, I explore how ideas about agents in quantum foundations might inform AI safety."
   ],
   "mathAiFeaturedPost": {
     "title": "Heisenberg meets Anju",
@@ -310,7 +310,22 @@
     "description": "This post explores how the notion of agents in extended Wigner’s friend scenarios in quantum foundations can add nuance to agentic frameworks in AI safety.",
     "url": "https://contextuality.substack.com/p/heisenberg-meets-anju"
   },
+  "mathAiAdditionalPosts": [
+    {
+      "title": "In programmes we trust: A categorical perspective",
+      "subtitle": "A (very) short sketch of the Curry-Howard-Lambek isomorphism",
+      "description": "This post explores the trustworthiness of Lean certifications of AI-assisted (and AI-driven!) mathematics by giving a categorical account of the Curry–Howard–Lambek correspondence.",
+      "url": "https://contextuality.substack.com/p/in-programmes-we-trust-a-categorical"
+    }
+  ],
   "mathAi": [
+    {
+      "id": "sheaf-calculator",
+      "title": "what's my sheaf?",
+      "url": "https://durgesh-qcat.github.io/sheaf/",
+      "description": "A global section calculator for empirical models based on Abramsky and Brandenburger’s sheaf-theoretic formalism of contextuality.",
+      "links": []
+    },
     {
       "id": "inverse-galois",
       "title": "Inverse Galois Problem",
@@ -365,7 +380,7 @@
           "text": "Andrews–Curtis Conjecture (ACC) Challenge",
           "href": "https://competition.sair.foundation/competitions/acc/overview"
         },
-        { "text": ", organised by the SAIR Foundation, and hovering around the top five across the competition categories (" },
+        { "text": ", organised by the SAIR Foundation, and hovering around the top three across the competition categories (" },
         {
           "text": "leaderboard",
           "href": "https://competition.sair.foundation/competitions/acc/leaderboard"

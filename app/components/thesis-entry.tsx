@@ -3,7 +3,7 @@ import { thesis } from "../content";
 export function ThesisEntry() {
   return (
     <>
-      <h3 className="entry-title">{thesis.title}</h3>
+      <h3 className="entry-title"><a href={thesis.url}>{thesis.title}</a></h3>
       <p className="supporting-text">
         <span className="author-names">{thesis.author}</span><br />
         {thesis.degree}, {thesis.institution}, {thesis.year}.

@@ -22,16 +22,17 @@ Open the local address printed by the server.
 - `content/academic-profile.json`: shared profile, About statement, publication, thesis, education, research, teaching, outreach, talks, awards, and Math–AI projects.
 - `app/content.ts`: website exports of the shared data.
 - `app/components/about-statement.tsx`: renders the exact shared About paragraphs, including Robin Cockett’s Wikipedia link and both TalTech research group links.
-- `app/components/thesis-entry.tsx`: the shared thesis title, degree details, supervisor, nomination, and university-hosted PDF link used on About and Publications.
+- `app/components/blog-posts.tsx`: renders the same blog titles, grey subtitles, descriptions, and links on Math–AI and Outreach & teaching. The CV lists each blog only once under Mathematics and AI projects.
+- `app/components/thesis-entry.tsx`: the shared thesis title (linked directly to the university PDF), degree details, supervisor, nomination, and university-hosted PDF link used on About and Publications.
 - `app/publications/page.tsx`: ACT publication, separate thesis section, and a Work in progress section on chiral daggers and quantum protocols.
-- `app/outreach-teaching/page.tsx`: two highlights; the full teaching history is in the CV.
+- `app/outreach-teaching/page.tsx`: Linear Actegories and Applied Category Theory highlights, followed by both blog posts; the full teaching history is in the CV.
 - `app/talks/page.tsx`: talks and posters, including the FMCS 2025/2024 slide links, Alberta Mathematical Dialogues slides, and Quantum Horizons poster download. Material links come from each talk's `links` array in the shared JSON and consistently use **Slides (PDF)** or **Poster (PDF)**. Apply this convention to future entries too.
-- `app/math-ai/page.tsx`: the single opening paragraph from `mathAiIntro`, followed by the blog's linked title, exact subtitle, and separate description from `mathAiFeaturedPost`, existing projects, and one Ongoing work paragraph combining ACC, Lean formalisation, and Indus-script research. `mathAiOngoing` stores text/href parts, with separate links labelled repository for the GR and Indus projects. The research and ongoing-project entries are also included in the CV.
-- `public/cv/durgesh-kumar-cv.pdf`: downloadable three-page academic CV.
+- `app/math-ai/page.tsx`: the opening paragraph from `mathAiIntro`, followed by Heisenberg from `mathAiFeaturedPost` and further posts from `mathAiAdditionalPosts`, each with a linked title, exact grey subtitle, and dark description. The sheaf calculator appears immediately after the posts, followed by the other projects and one Ongoing work paragraph combining ACC, Lean formalisation, and Indus-script research. `mathAiOngoing` stores text/href parts, with separate links labelled repository for the GR and Indus projects. The introduction, all blogs, projects, research, and ongoing work are also included in the CV.
+- `public/cv/durgesh-kumar-cv.pdf`: downloadable four-page academic CV.
 - `public/thesis/durgesh-kumar-msc-thesis.pdf`: thesis from the university-hosted public copy.
 - `public/posters/quantum-horizons-2025.pdf`: supplied International Quantum Horizons Symposium poster, preserved unchanged.
 - `public/slides/alberta-mathematical-dialogues-2025.pdf`: supplied Alberta Mathematical Dialogues 2025 slides, preserved unchanged.
-- `scripts/build-cv.py`: rebuilds the CV from the same JSON, including the blog title/subtitle/description, current research, and the combined ongoing-project paragraph with all links. The blog remains the first entry under Mathematics and AI projects.
+- `scripts/build-cv.py`: rebuilds the CV from the same JSON, including the Math–AI introduction, every blog title/subtitle/description, current research, and the combined ongoing-project paragraph with all links. The blogs remain before the projects under Mathematics and AI projects. Body text, metadata/subtitles, and links/headings use the website's dark, grey, and burgundy colours.
 - `public/images/durgesh-kumar-outdoors.jpg`: supplied portrait, displayed in a circular frame beside About text; clicking it opens the full image. A linked graduation-cap icon for Google Scholar appears directly beneath the photograph.
 - `app/globals.css`: typography, colors, responsive layout, and portrait framing.
 
@@ -46,7 +47,7 @@ python3 scripts/build-cv.py --data content/academic-profile.json --output output
 cp output/pdf/durgesh-kumar-cv.pdf public/cv/durgesh-kumar-cv.pdf
 ```
 
-The three-page PDF uses Georgia with burgundy headings and links, comfortable spacing, and the complete academic record. Its contact row includes a Website link using `profile.siteUrl`, including before deployment. Local talk-material URLs are expanded against `profile.siteUrl` in the CV; these links become publicly available after deployment. Check the rendered PDF after content edits. Update the JSON About paragraphs once to change the wording in both outputs, then rebuild the CV.
+The four-page PDF uses Georgia with burgundy headings and links, comfortable spacing, and the complete academic record. Its contact row includes a Website link using `profile.siteUrl`, including before deployment. Local talk-material URLs are expanded against `profile.siteUrl` in the CV; these links become publicly available after deployment. Check the rendered PDF after content edits. Update the JSON About paragraphs once to change the wording in both outputs, then rebuild the CV.
 
 ## GitHub Pages
 

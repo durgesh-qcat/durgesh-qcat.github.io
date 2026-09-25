@@ -21,10 +21,12 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import BaseDocTemplate, Frame, KeepTogether, PageBreak, PageTemplate, Paragraph, Spacer, Table, TableStyle
 
-INK = colors.HexColor('#272427')
-MUTED = colors.HexColor('#655f63')
-BURGUNDY = colors.HexColor('#752b3b')
-RULE = colors.HexColor('#d8cfd1')
+# Match the website palette; descriptive prose stays dark and metadata grey.
+INK = colors.HexColor('#171717')
+MUTED = colors.HexColor('#686868')
+LINK_COLOR = '#8a2d3b'
+BURGUNDY = colors.HexColor(LINK_COLOR)
+RULE = colors.HexColor('#e6e6e6')
 PAGE_W, PAGE_H = A4
 MARGIN_X, MARGIN_TOP, MARGIN_BOTTOM = 43, 37, 42
 CONTENT_W = PAGE_W - 2 * MARGIN_X
@@ -48,6 +50,7 @@ def register_fonts():
 
 FONT, BOLD, ITALIC, BOLD_ITALIC = register_fonts()
 BODY = ParagraphStyle('Body', fontName=FONT, fontSize=10.5, leading=13.5, textColor=INK, spaceAfter=0, allowWidows=0, allowOrphans=0)
+SUBTITLE = ParagraphStyle('Subtitle', parent=BODY, fontName=ITALIC, textColor=MUTED)
 NAME = ParagraphStyle('Name', parent=BODY, fontName=BOLD, fontSize=25, leading=30, spaceAfter=3)
 SECTION = ParagraphStyle('Section', parent=BODY, fontName=BOLD, fontSize=12, leading=15, textColor=BURGUNDY, spaceBefore=10, spaceAfter=5, keepWithNext=True)
 DATE = ParagraphStyle('Date', parent=BODY, fontSize=10, leading=13.5, textColor=MUTED, alignment=TA_RIGHT)
@@ -58,7 +61,7 @@ def esc(value):
 
 def link(label, url):
     safe_url = escape(url, {'"': '&quot;'})
-    return f'<a href="{safe_url}" color="#752b3b">{esc(label)}</a>'
+    return f'<a href="{safe_url}" color="{LINK_COLOR}">{esc(label)}</a>'
 
 def p(text, style=BODY):
     return Paragraph(text, style)
@@ -184,11 +187,15 @@ def build(data, output):
     story.append(KeepTogether(awards))
 
     story.append(heading('Mathematics and AI projects'))
-    blog = data.get('mathAiFeaturedPost')
-    if blog:
+    for paragraph in data.get('mathAiIntro', []):
+        story.extend([p(esc(paragraph)), Spacer(1, 9)])
+
+    blogs = [data['mathAiFeaturedPost']] if data.get('mathAiFeaturedPost') else []
+    blogs.extend(data.get('mathAiAdditionalPosts', []))
+    for blog in blogs:
         story.append(KeepTogether([
             p('<b>' + link(blog['title'], blog['url']) + '</b>'),
-            p('<i>' + esc(blog['subtitle']) + '</i>'),
+            p(esc(blog['subtitle']), SUBTITLE),
             p(esc(blog['description'])),
             Spacer(1, 9),
         ]))

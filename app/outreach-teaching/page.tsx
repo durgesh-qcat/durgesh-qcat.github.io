@@ -1,9 +1,10 @@
 import { outreach, profile } from "../content";
+import { BlogPosts } from "../components/blog-posts";
 import { sectionMetadata } from "../site-metadata";
 
 export const metadata = sectionMetadata(
   "Outreach & teaching",
-  "An expository post for the n-Category Café and a study module in applied category theory.",
+  "Expository writing on category theory, quantum foundations, and AI, alongside teaching in applied category theory.",
 );
 
 export default function OutreachTeachingPage() {
@@ -23,6 +24,7 @@ export default function OutreachTeachingPage() {
           </p>
         </section>
       ))}
+      <BlogPosts idPrefix="outreach-blog-title" />
       <p className="cv-note">
         My <a href={profile.cvUrl}>full CV</a> includes further teaching experience,
         including graduate teaching assistantships at the University of Calgary.

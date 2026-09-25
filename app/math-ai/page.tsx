@@ -1,5 +1,6 @@
 import { Fragment } from "react";
-import { mathAi, mathAiIntro, mathAiFeaturedPost, mathAiOngoing } from "../content";
+import { mathAi, mathAiIntro, mathAiOngoing } from "../content";
+import { BlogPosts } from "../components/blog-posts";
 import { sectionMetadata } from "../site-metadata";
 
 export const metadata = sectionMetadata(
@@ -15,13 +16,7 @@ export default function MathAiPage() {
       </header>
       {mathAiIntro.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
       <div className="math-ai-sections">
-        <section className="math-ai-entry math-ai-blog" aria-labelledby="math-ai-blog-title">
-          <header className="math-ai-blog-heading">
-            <h2 id="math-ai-blog-title"><a href={mathAiFeaturedPost.url}>{mathAiFeaturedPost.title}</a></h2>
-            {mathAiFeaturedPost.subtitle && <p className="page-description">{mathAiFeaturedPost.subtitle}</p>}
-          </header>
-          <p>{mathAiFeaturedPost.description}</p>
-        </section>
+        <BlogPosts idPrefix="math-ai-blog-title" />
         {mathAi.map((entry) => (
           <section className="math-ai-entry math-ai-project" key={entry.id}>
             <h2>{entry.url ? <a href={entry.url}>{entry.title}</a> : entry.title}</h2>

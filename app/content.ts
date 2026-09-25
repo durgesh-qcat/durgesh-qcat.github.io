@@ -10,6 +10,7 @@ export const {
   talks,
   mathAiIntro,
   mathAiFeaturedPost,
+  mathAiAdditionalPosts,
   mathAi,
   mathAiOngoing,
   workInProgress,
