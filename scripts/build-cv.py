@@ -174,22 +174,20 @@ def build(data, output):
             )
         story.append(entry('<b>' + esc(item['title']) + '</b>', item['date'], lines, gap=9))
 
-    awards = [heading('Honors and awards')]
-    for item in data['awards']:
+    for index, item in enumerate(data['awards']):
         description = esc(item['description'])
         if item['description'] == thesis['nomination']:
             description = '<i>' + description + '</i>'
-        awards.extend([
+        award = [
             dated('<b>' + esc(item['title']) + '</b>', item['date']),
             p(description),
             Spacer(1, 8),
-        ])
-    story.append(KeepTogether(awards))
+        ]
+        if index == 0:
+            award.insert(0, heading('Honors and awards'))
+        story.append(KeepTogether(award))
 
     story.append(heading('Mathematics and AI projects'))
-    for paragraph in data.get('mathAiIntro', []):
-        story.extend([p(esc(paragraph)), Spacer(1, 9)])
-
     blogs = [data['mathAiFeaturedPost']] if data.get('mathAiFeaturedPost') else []
     blogs.extend(data.get('mathAiAdditionalPosts', []))
     for blog in blogs:
@@ -218,9 +216,8 @@ def build(data, output):
         story.append(p(' '.join(paragraphs)))
         story.append(Spacer(1, 9))
 
-    story.append(heading('Patent'))
     patent = data['patent']
-    story.append(KeepTogether([p('<b>' + esc(patent['title']) + '</b>'), p('Patent record: ' + esc(patent['number']) + '.'), Spacer(1, 4)]))
+    story.append(KeepTogether([heading('Patent'), p('<b>' + esc(patent['title']) + '</b>'), p('Patent record: ' + esc(patent['number']) + '.'), Spacer(1, 4)]))
 
     story.append(heading('Relevant coursework'))
     story.append(p('; '.join(esc(course) for course in data['courses']) + '.'))

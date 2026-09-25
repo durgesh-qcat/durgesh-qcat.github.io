@@ -324,6 +324,9 @@ h3 {
 .thesis-section > h2 {
   margin-bottom: 18px;
 }
+.thesis-details {
+  color: var(--text);
+}
 .entry-meta { margin-bottom: 8px; }
 .breadcrumb { margin-bottom: 22px; }
 .thesis-title { margin-bottom: 8px; }
@@ -370,6 +373,9 @@ h3 {
   font-size: 13px;
 }
 .math-ai-page > p {
+  margin-bottom: 12px;
+}
+.math-ai-page > p:last-of-type {
   margin-bottom: 32px;
 }
 .math-ai-sections {

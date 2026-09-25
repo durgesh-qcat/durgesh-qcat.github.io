@@ -4,7 +4,7 @@ export function ThesisEntry() {
   return (
     <>
       <h3 className="entry-title"><a href={thesis.url}>{thesis.title}</a></h3>
-      <p className="supporting-text">
+      <p className="supporting-text thesis-details">
         <span className="author-names">{thesis.author}</span><br />
         {thesis.degree}, {thesis.institution}, {thesis.year}.
       </p>
