@@ -317,15 +317,16 @@ h3 {
   line-height: 1.55;
   margin: 0 0 12px;
 }
-.entry-meta, .supporting-text, .breadcrumb {
+.entry-meta, .breadcrumb {
   color: var(--secondary);
+  font-size: 14px;
+}
+.supporting-text {
+  color: var(--text);
   font-size: 14px;
 }
 .thesis-section > h2 {
   margin-bottom: 18px;
-}
-.thesis-details {
-  color: var(--text);
 }
 .entry-meta { margin-bottom: 8px; }
 .breadcrumb { margin-bottom: 22px; }
