@@ -24,7 +24,7 @@ export default function OutreachTeachingPage() {
           </p>
         </section>
       ))}
-      <BlogPosts idPrefix="outreach-blog-title" />
+      <BlogPosts idPrefix="outreach-blog-title" titleClassName="entry-title" />
       <p className="cv-note">
         My <a href={profile.cvUrl}>full CV</a> includes further teaching experience,
         including graduate teaching assistantships at the University of Calgary.
