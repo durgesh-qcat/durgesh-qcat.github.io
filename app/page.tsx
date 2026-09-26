@@ -73,10 +73,10 @@ export default function AboutPage() {
           </li>
         </ul>
         <p className="supporting-text">
-          Further teaching experience and activities are in my <a href={profile.cvUrl}>CV</a>.
+          For my blog posts on <a href={mathAiFeaturedPost.url}>AI safety</a> and <a href={mathAiAdditionalPosts[0].url}>formalisation</a>, see the <a href="/math-ai/">Math–AI section</a>.
         </p>
         <p className="supporting-text">
-          For my blog posts on <a href={mathAiFeaturedPost.url}>AI safety</a> and <a href={mathAiAdditionalPosts[0].url}>formalisation</a>, see the <a href="/math-ai/">Math–AI section</a>.
+          Further teaching experience and activities are in my <a href={profile.cvUrl}>CV</a>.
         </p>
       </section>
     </article>
