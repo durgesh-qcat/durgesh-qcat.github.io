@@ -21,7 +21,7 @@ export default function MathAiPage() {
           <section className="math-ai-entry math-ai-project" key={entry.id}>
             <h2>{entry.url ? <a href={entry.url}>{entry.title}</a> : entry.title}</h2>
             <p>{entry.description}</p>
-            {"authors" in entry && entry.authors && <p className="supporting-text"><span className="author-names">{entry.authors}</span></p>}
+            {"authors" in entry && typeof entry.authors === "string" && entry.authors && <p className="supporting-text"><span className="author-names">{entry.authors}</span></p>}
             {entry.links.length > 0 && (
               <p className="resource-links">
                 {entry.links.map((link) => <a key={link.url} href={link.url}>{link.label}</a>)}

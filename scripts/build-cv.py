@@ -207,7 +207,8 @@ def build(data, output):
         lines.append(esc(item['description']))
         if item.get('links'):
             lines.append(' &nbsp; | &nbsp; '.join(link(x['label'], x['url']) for x in item['links']))
-        story.append(KeepTogether([p('<b>' + link(item['title'], item['url']) + '</b>')] + [p(line) for line in lines] + [Spacer(1, 9)]))
+        title = link(item['title'], item['url']) if item.get('url') else esc(item['title'])
+        story.append(KeepTogether([p('<b>' + title + '</b>')] + [p(line) for line in lines] + [Spacer(1, 9)]))
 
     if data.get('mathAiOngoing'):
         story.append(heading('Ongoing work'))
