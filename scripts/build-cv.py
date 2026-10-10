@@ -120,20 +120,20 @@ def build(data, output):
     for item in data['education']:
         lines = [esc(item['degree']) + '; ' + esc(item['location'])]
         lines += [esc(line) for line in item['details']]
-        story.append(entry('<b>' + esc(item['institution']) + '</b>', item['dates'], lines))
+        story.append(entry('<b>' + esc(item['institution']) + '</b>', item['dates'], lines, gap=3))
 
     story.append(heading('Research experience'))
     for item in data['research']:
-        lines = [esc(item['institution']) + '; ' + esc(item['location'])]
+        lines = [esc(item['institution']) + esc(item.get('locationSeparator', '; ')) + esc(item['location'])]
         lines += [esc(line) for line in item['details']]
         if item.get('groups'):
             lines.append(' and '.join(link(group['name'], group['url']) for group in item['groups']) + ' groups.')
-        story.append(entry('<b>' + esc(item['role']) + '</b>', item['dates'], lines))
+        story.append(entry('<b>' + esc(item['role']) + '</b>', item['dates'], lines, gap=3))
 
     story.append(heading('Publications'))
     for item in data['publications']:
         lines = [esc(item['authors']) + '.', link(item['venue'], item['venueUrl']) + '.', esc(item['status'])]
-        story.append(entry('<b>' + link(item['title'], item['url']) + '</b>', item['year'], lines))
+        story.append(entry('<b>' + link(item['title'], item['url']) + '</b>', item['year'], lines, gap=3))
 
     thesis = data['thesis']
     story.append(heading("Master's thesis"))

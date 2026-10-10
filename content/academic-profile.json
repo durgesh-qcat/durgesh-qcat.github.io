@@ -103,6 +103,16 @@
   },
   "research": [
     {
+      "role": "Iliad Intensive",
+      "institution": "LISA",
+      "location": "London",
+      "locationSeparator": ", ",
+      "dates": "cohort undecided",
+      "details": [
+        "Iliad Intensive is a competitive, funded, month-long programme hosted at LISA for mathematicians interested in AI safety."
+      ]
+    },
+    {
       "role": "Visiting Researcher",
       "institution": "Tallinn University of Technology (TalTech)",
       "location": "Tallinn, Estonia",
