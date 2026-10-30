@@ -69,8 +69,8 @@ def p(text, style=BODY):
 def heading(label):
     return p(esc(label), SECTION)
 
-def dated(title, date=''):
-    row = Table([[p(title), p(esc(date), DATE)]], colWidths=[CONTENT_W - 106, 106], hAlign='LEFT')
+def dated(title, date='', date_width=106):
+    row = Table([[p(title), p(esc(date), DATE)]], colWidths=[CONTENT_W - date_width, date_width], hAlign='LEFT')
     row.setStyle(TableStyle([
         ('LEFTPADDING', (0, 0), (-1, -1), 0), ('RIGHTPADDING', (0, 0), (-1, -1), 0),
         ('TOPPADDING', (0, 0), (-1, -1), 0), ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
@@ -78,8 +78,8 @@ def dated(title, date=''):
     ]))
     return row
 
-def entry(title, date, lines, gap=6):
-    return KeepTogether([dated(title, date)] + [p(line) for line in lines] + [Spacer(1, gap)])
+def entry(title, date, lines, gap=6, date_width=106):
+    return KeepTogether([dated(title, date, date_width)] + [p(line) for line in lines] + [Spacer(1, gap)])
 
 class CVDocument(BaseDocTemplate):
     def __init__(self, filename, profile):
@@ -128,7 +128,8 @@ def build(data, output):
         lines += [esc(line) for line in item['details']]
         if item.get('groups'):
             lines.append(' and '.join(link(group['name'], group['url']) for group in item['groups']) + ' groups.')
-        story.append(entry('<b>' + esc(item['role']) + '</b>', item['dates'], lines, gap=3))
+        date_width = max(106, pdfmetrics.stringWidth(item['dates'], FONT, DATE.fontSize) + 1)
+        story.append(entry('<b>' + esc(item['role']) + '</b>', item['dates'], lines, gap=3, date_width=date_width))
 
     story.append(heading('Publications'))
     for item in data['publications']:
